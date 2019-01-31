@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_setting"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context=".activities.CategoriesActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="10"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            app:srcCompat="@drawable/exit" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="Категории"
+            android:textAlignment="center"
+            android:textColor="#6d7477"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="246dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ok" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/owner_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="капитан яхты"
+                    android:textAlignment="center"
+                    android:textColor="#6d7477"
+                    android:textSize="20sp" />
+
+                <Spinner
+                    android:id="@+id/type"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:hint="Тип(парусная/моторная)"
+                    android:inputType="text"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <Spinner
+                    android:id="@+id/manufacturer"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:hint="Производитель"
+                    android:inputType="text"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/model"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Модель"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/loa"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="длина"
+                    android:inputType="number"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/year"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Год выпуска"
+                    android:inputType="number"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/flag"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Флаг"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/boatname"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Имя"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/port"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Порт"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/worker_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Работаю на яхте"
+                    android:textAlignment="center"
+                    android:textColor="#6d7477"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/type_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Тип(парусная/моторная)"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/manufacturer_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Производитель"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/model_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Модель"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/loa_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="длина"
+                    android:inputType="number"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/year_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Год выпуска"
+                    android:inputType="number"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/flag_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Флаг"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/boatname_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Имя"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/port_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Порт"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/state_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Должность"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/service_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Сервис/обслуживание"
+                    android:textAlignment="center"
+                    android:textColor="#6d7477"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/info_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:gravity="bottom"
+                    android:hint="Описание сферы деятельности"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="20dp"
+                    android:scrollbars="vertical"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/findwork_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Ищу работу"
+                    android:textAlignment="center"
+                    android:textColor="#6d7477"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/resume_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:gravity="bottom"
+                    android:hint="Резюме"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="20dp"
+                    android:scrollbars="vertical"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/findteam_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Набираю команду"
+                    android:textAlignment="center"
+                    android:textColor="#6d7477"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/vacancy_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:gravity="bottom"
+                    android:hint="Кого ищу"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="20dp"
+                    android:scrollbars="vertical"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sell_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Продаю/сдаю яхты"
+                    android:textAlignment="center"
+                    android:textColor="#6d7477"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/country_sell"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Страна"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1" />
+
+                <EditText
+                    android:id="@+id/type_sell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:gravity="bottom"
+                    android:hint="Какие лодки"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="20dp"
+                    android:scrollbars="vertical"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/create_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Строю яхты"
+                    android:textAlignment="center"
+                    android:textColor="#6d7477"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/country_create"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:hint="Страна"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1" />
+
+                <EditText
+                    android:id="@+id/type_create"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:ems="10"
+                    android:gravity="bottom"
+                    android:hint="Какие лодки"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="20dp"
+                    android:scrollbars="vertical"
+                    android:textColor="#6d7477"
+                    android:textColorHint="#b6bdc1" />
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/setcategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:editable="false"
+                android:ems="10"
+                android:focusable="false"
+                android:text="Выберите категории(макс. 6)"
+                android:textAlignment="center"
+                android:textColor="#6d7477"
+                android:textColorHint="#6d7477"
+                android:textSize="15dp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/category1"
+                    android:gravity="center"
+                    android:textColor="#ffff" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/category1"
+                    android:gravity="center"
+                    android:textColor="#ffff" />
+
+                <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/category1"
+                    android:gravity="center"
+                    android:textColor="#ffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/category2"
+                    android:gravity="center"
+                    android:textColor="#6d7477" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/category2"
+                    android:gravity="center"
+                    android:textColor="#6d7477" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/category2"
+                    android:gravity="center"
+                    android:textColor="#6d7477" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

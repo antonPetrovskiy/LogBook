@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Показывать новости за"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#054c71" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:padding="2dp"
+        android:background="@drawable/layout_bg3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="день"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#054c71"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="неделя"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#054c71"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="месяц"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#054c71"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="все"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="#054c71"
+
+            android:background="@drawable/layout_bg4"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Показывать новости в радиусе"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#054c71" />
+
+    <com.kevalpatel2106.rulerpicker.RulerValuePicker
+        android:id="@+id/ruler_picker"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#d5e0e8"
+        app:indicator_color="#054c71"
+        app:notch_color="#054c71"
+        app:ruler_text_color="#054c71"
+        app:indicator_interval="14dp"
+        app:indicator_width="2dp"
+        app:max_value="5000"
+        app:min_value="0"
+        app:ruler_text_size="6sp"/>
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@drawable/setting_ok" />
+</LinearLayout>
