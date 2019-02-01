@@ -57,7 +57,7 @@ Social network designed for boaters and people who work in this area
 			<img src="img/dialogs.jpg"/>
 		</td>
     <td>
-			<img src="img/feeds.jpg"/>
+			<img src="img/ezgif.com-video-to-gif.gif"/>
 		</td>
     <td>
 			<img src="img/messages.jpg"/>
