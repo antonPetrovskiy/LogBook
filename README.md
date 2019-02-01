@@ -24,7 +24,7 @@ Social network designed for boaters and people who work in this area
 			<img src="img/login.jpg"/>
 		</td>
 		<td>
-			<img src="img/map.jpg"/>
+			<img src="img/doc_20190201_025328.gif"/>
 		</td>
     <td>
 			<img src="img/menu.jpg"/>
